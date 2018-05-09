@@ -1,8 +1,9 @@
 
 public abstract class Character {
 		
+	
 		private String name;
-//		public int maxHP;
+		private int maxHP;
 		private int hp;
 		private int str;
 		private int def;
@@ -12,18 +13,24 @@ public abstract class Character {
 		private int spd;
 		private int stam;
 		private int manactrl;
-		private int luck;
+		private int luk;
 		private int intel; 
 	
-		public Character(String charName, int health, int strength, int defense, int magic, int resistance, int speed) 
+		public Character(String charName, int health, int strength, int defense, int magic, int resistance, int dexterity, int speed, int stamina, int manacontrol, int luck, int intelligence) 
 		{
 			name = charName;
+			maxHP = health;
 			hp = health;
 			str = strength;
 			def = defense;
 			mag = magic;
 			res = resistance;
+			dex = dexterity;
 			spd = speed;
+			stam = stamina;
+			manactrl = manacontrol;
+			luk = luck;
+			intel = intelligence;
 		}
 		
 		
@@ -34,7 +41,13 @@ public abstract class Character {
 			msg += "Strength: " + str + "\n";
 			msg += "Defense: " + def + "\n";
 			msg += "Magic: " + mag + "\n";
-			msg += "Resistance: " + res;
+			msg += "Resistance: " + res + "\n";
+			msg += "Dexterity: " + dex + "\n";
+			msg += "Speed: " + spd + "\n";
+			msg += "Stamina: " + stam + "\n";
+			msg += "Mana Control: " + manactrl + "\n";
+			msg += "Luck: " + luk + "\n";
+			msg += "Intelligence: " + intel;
 			return msg;
 		}
 		
@@ -116,11 +129,11 @@ public abstract class Character {
 		}
 		public int getLuck()
 		{
-			return luck;
+			return luk;
 		}
 		public void setLuck(int luck)
 		{
-			this.luck = luck;
+			this.luk = luck;
 		}
 		public int getIntel()
 		{
@@ -130,7 +143,7 @@ public abstract class Character {
 		{
 			intel = intelligence;
 		}
-		//stat setters complete
+		
 		boolean burn;
 		boolean paralysis;
 		boolean poison;
@@ -143,15 +156,15 @@ public abstract class Character {
 		
 		public void burn()
 		{
-			while(burn = true)
+			while(burn)
 			{
-				hp = (9/10)*hp;
+				hp -= (1/10)*maxHP;
 				setStr((4/5)*getStr());
 			}
 		}
 		public void paralysis()
 		{
-			while(paralysis = true)
+			while(paralysis)
 			{
 				setSpeed((3/5)*spd);
 				setDex((4/5)*dex);
@@ -159,7 +172,7 @@ public abstract class Character {
 		}
 		public void poison()
 		{
-			while(poison = true)
+			while(poison)
 			{
 				hp -= (9/10)*hp;
 			}
@@ -183,7 +196,7 @@ public abstract class Character {
 		{
 			while(curse = true)
 			{
-				setLuck((4/5)*luck);
+				setLuck((4/5)*luk);
 				setSpeed((13/20)*spd);
 				setDex((13/20)*dex);
 			}
@@ -204,7 +217,6 @@ public abstract class Character {
 				activeSkills = false;
 			}
 		}*/
-		
 		public void dLock()
 		{
 			while(dLock = true)

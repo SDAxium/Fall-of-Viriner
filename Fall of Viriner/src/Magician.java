@@ -9,8 +9,14 @@ public class Magician extends Character
 				2,
 				5,
 				10,
-				7
-			);
+				7,
+				3,
+				3,
+				10,
+				10,
+				3,
+				10
+				);
 	}
 
 }

@@ -1,15 +1,12 @@
 
-public class GameRunner {
+public class GameRunner
+{
 	public static void main(String[] args) 
 	{
-		Character test = new Adventurer("Damian");
-		System.out.println(test);
+		Character test0 = new Adventurer("Damian");
+		System.out.println(test0);
+		Character test1b = 
 	}
-	
-
-	
-	
-
-	}
+}
 
 
