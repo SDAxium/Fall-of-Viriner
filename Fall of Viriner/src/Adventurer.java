@@ -1,19 +1,17 @@
 
 public class Adventurer extends Character 
 {
-	public Adventurer() 
+	public Adventurer(String charName) 
 	{
-		setHP((int)Math.random()*10+1);
-		setStr((int)Math.random()*10+1);
-		setDef((int)Math.random()*10+1);
-		setMag((int)Math.random()*10+1);
-		setRes((int)Math.random()*10+1);
-		setAgil((int)Math.random()*10+1);
-		setSpeed((int)Math.random()*10+1);
-		setStam((int)Math.random()*10+1);
-		setMC((int)Math.random()*10+1);
-		setLuk((int)Math.random()*10+1);
-		setInt((int)Math.random()*10+1);
+		//Multiply first and then cast or all the stats will be 1.
+		super(
+				charName,
+				(int)(Math.random() * 10 + 1), //health
+				(int)(Math.random() * 10 + 1), //strength
+				(int)(Math.random() * 10 + 1), //defense
+				(int)(Math.random() * 10 + 1), //magic
+				(int)(Math.random() * 10 + 1) //resistance				
+		);
 	}
 
 }
