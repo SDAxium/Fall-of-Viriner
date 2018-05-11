@@ -1,7 +1,7 @@
 
 public abstract class Character {
 		
-	
+		
 		private String name;
 		private int maxHP;
 		private int hp;
@@ -37,7 +37,8 @@ public abstract class Character {
 		public String toString() {
 			String msg = "";
 			msg += name + "\n";
-			msg += "HP: " + hp + "\n";
+			msg += "Max HP: " + maxHP + "\n";
+			msg += "Current Health: " + hp + "\n";
 			msg += "Strength: " + str + "\n";
 			msg += "Defense: " + def + "\n";
 			msg += "Magic: " + mag + "\n";
@@ -158,8 +159,12 @@ public abstract class Character {
 		{
 			while(burn)
 			{
-				hp -= (1/10)*maxHP;
-				setStr((4/5)*getStr());
+				long systime = System.nanoTime();
+				long burntime = System.nanoTime()-systime;
+				if(burntime >= (3*(10^9)) && burntime%(3*(10^9)) == 0)
+				{
+					hp -= (1/16)*maxHP;
+				}
 			}
 		}
 		public void paralysis()
@@ -174,7 +179,11 @@ public abstract class Character {
 		{
 			while(poison)
 			{
-				hp -= (9/10)*hp;
+				long starttime = System.nanoTime();
+				if(starttime >= (3*(10^9)) && starttime%(3*(10^9)) == 0)
+				{
+					hp -= (1/8)*maxHP;
+				}
 			}
 		}
 		public void freeze()
