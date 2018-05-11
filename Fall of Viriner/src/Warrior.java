@@ -6,19 +6,7 @@ public class Warrior extends Character
 	public Warrior(String charName)
 	{
 	super(
-			charName,
-			10,
-			7,
-			7,
-			3,
-			7,
-			2,
-			3,
-			10,
-			10,
-			1,
-			10);
-	
+			charName,10,7,7,3,7,2,3,10,10,1,10);
 	}
 }
 

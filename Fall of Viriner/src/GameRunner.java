@@ -5,7 +5,8 @@ public class GameRunner
 	{
 		Character test0 = new Adventurer("Damian");
 		System.out.println(test0);
-		Character test1b = 
+		
+		
 	}
 }
 
