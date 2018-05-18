@@ -1,22 +1,22 @@
 
-public abstract class Character {
+public abstract class Character implements Affinity {
 		
 		
 		private String name;
-		private int maxHP;
-		private int hp;
-		private int str;
-		private int def;
-		private int mag;
-		private int res;
-		private int dex;
-		private int spd;
-		private int stam;
-		private int manactrl;
-		private int luk;
-		private int intel; 
+		private double maxHP;
+		private double hp;
+		private double str;
+		private double def;
+		private double mag;
+		private double res;
+		private double dex;
+		private double spd;
+		private double stam;
+		private double manactrl;
+		private double luk;
+		private double intel; 
 	
-		public Character(String charName, int health, int strength, int defense, int magic, int resistance, int dexterity, int speed, int stamina, int manacontrol, int luck, int intelligence) 
+		public Character(String charName, double health, double strength, double defense, double magic, double resistance, double dexterity, double speed, double stamina, double manacontrol, double luck, double intelligence) 
 		{
 			name = charName;
 			maxHP = health;
@@ -33,7 +33,6 @@ public abstract class Character {
 			intel = intelligence;
 		}
 		
-		
 		public String toString() {
 			String msg = "";
 			msg += name + "\n";
@@ -48,101 +47,101 @@ public abstract class Character {
 			msg += "Stamina: " + stam + "\n";
 			msg += "Mana Control: " + manactrl + "\n";
 			msg += "Luck: " + luk + "\n";
-			msg += "Intelligence: " + intel;
+			msg += "doubleelligence: " + intel;
 			return msg;
 		}
 		
-		public int getBST() 
+		public double getBST() 
 		{
 			return getHP()+getStr()+getDef()+getMag()+getRes()+getDex()+getSpeed()+getStam()+getManactrl()+getLuck()+getIntel();
 		}
-		public int getHP() 
+		public double getHP() 
 		{
 			return hp;
 		}
-		public void setHP(int health) 
+		public void setHP(double health) 
 		{
 			this.hp = health;
 		}
-		public int getStr()
+		public double getStr()
 		{
 			return str;
 		}
-		public void setStr(int strength)
+		public void setStr(double strength)
 		{
 			this.str = strength;
 		}
-		public int getDef()
+		public double getDef()
 		{
 			return def;
 		}
-		public void setDef(int defense)
+		public void setDef(double defense)
 		{
 			this.def = defense;
 		}
-		public int getMag()
+		public double getMag()
 		{
 			return mag;
 		}
-		public void setMag(int magic)
+		public void setMag(double magic)
 		{
 			this.mag = magic;
 		}
-		public int getRes()
+		public double getRes()
 		{
 			return res;
 		}
-		public void setRes(int resistance)
+		public void setRes(double resistance)
 		{
 			this.res = resistance;
 		}
-		public int getDex()
+		public double getDex()
 		{
 			return dex;
 		}
-		public void setDex(int dexity)
+		public void setDex(double dexterity)
 		{
-			this.dex = dexity;
+			this.dex = dexterity;
 		}
-		public int getSpeed()
+		public double getSpeed()
 		{
 			return spd;
 		}
-		public void setSpeed(int speed)
+		public void setSpeed(double speed)
 		{
 			this.spd = speed;
 		}
-		public int getStam()
+		public double getStam()
 		{
 			return stam;
 		}
-		public void setStam(int stamina)
+		public void setStam(double stamina)
 		{
 			this.stam = stamina;
 		}
-		public int getManactrl()
+		public double getManactrl()
 		{
 			return manactrl;
 		}
-		public void setManactrl(int manacontrol)
+		public void setManactrl(double manacontrol)
 		{
 			this.manactrl = manacontrol;
 		}
-		public int getLuck()
+		public double getLuck()
 		{
 			return luk;
 		}
-		public void setLuck(int luck)
+		public void setLuck(double luck)
 		{
 			this.luk = luck;
 		}
-		public int getIntel()
+		public double getIntel()
 		{
 			return intel;
 		}
-		public void setInt(int intelligence)
+		public void setIntel(double intelligence)
 		{
-			intel = intelligence;
+			this.intel = intelligence;
 		}
 		
 		boolean burn;
@@ -230,7 +229,7 @@ public abstract class Character {
 		{
 			while(dLock = true)
 			{
-			for(int i = 20;i <= 0;i--)
+			for(double i = 20;i <= 0;i--)
 			{
 				if(i > 0)
 				{
@@ -244,4 +243,8 @@ public abstract class Character {
 			}
 		}
 	}
+		
+		
 }
+
+ 
